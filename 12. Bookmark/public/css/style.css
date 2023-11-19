@@ -2,3 +2,127 @@
 @tailwind components;
 @tailwind utilities;
 
+@media screen(lg)
+{
+  .bg-hero
+  {
+    width:2000px;
+    height: 300px;
+    left: 30%;
+    @apply absolute rounded-l-full top-52 bg-softBlue;
+  }
+
+  .bg-tabs
+  {
+    width:2000px;
+    height: 300px;
+    right: 60%;
+    @apply absolute rounded-r-full top-60 bg-softBlue;
+  }
+}
+
+/* HAMBURGER MENU */
+
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
+  
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+  
+  .hamburger-middle {
+    transform: translateY(7px);
+  }
+  
+  .hamburger-bottom {
+    transform: translateY(14px);
+    background: #000;
+  }
+  
+  .open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+    position: fixed;
+    top: 50px;
+    right: 25px;
+  }
+  
+  .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+    background-color: #fff;
+  }
+  
+  .open .hamburger-middle {
+    display: none;
+  }
+  
+  .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    background-color: #fff;
+}
+
+.btn
+{
+    @apply p-4 text-sm md:text-base font-semibold capitalize rounded shadow-md border-2;
+}
+
+.btn-blue
+{
+    @apply bg-softBlue hover:bg-white border-softBlue text-white hover:text-softBlue;
+}
+
+.btn-gray
+{
+    @apply bg-gray-300 hover:bg-white border-gray-300 text-black hover:text-gray-600;
+}
+
+.tab-heading
+{
+  @apply flex justify-center text-center text-gray-600 border-b md:border-b-0 hover:text-softRed w-full md:w-1/3 cursor-pointer;
+}
+
+.panel-heading
+{
+  @apply mt-14 text-3xl font-semibold text-center md:text-left md:mt-0;
+}
+
+.panel-description
+{
+  @apply max-w-md text-center text-grayishBlue md:text-left;
+}
+
+.btn-panel
+{
+  @apply px-6 py-3
+        mt-4 font-semibold capitalize cursor-pointer
+        text-white hover:text-softBlue
+        border-2 hover:border-2
+        border-white hover:border-softBlue
+        rounded-lg md:inline-flex 
+        bg-softBlue hover:bg-white;
+}
+
+.box-container
+{
+  @apply relative flex flex-col md:flex-row items-center max-w-5xl mx-auto space-y-10 px-10 md:px-6 md:space-y-0 md:space-x-7; 
+}
+
+.btn-box
+{
+  @apply block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue;
+}
